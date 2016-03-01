@@ -2,7 +2,6 @@ package ru.ifmo.ctddev.kupriyanov.walk;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.DirectoryStream;
@@ -14,6 +13,9 @@ import java.nio.file.Paths;
  * Created by pinkdonut on 29.02.2016.
  */
 public class RecursiveWalk {
+
+    private static MD5Hasher hasher = new MD5Hasher();
+
     public static void main(String[] args) {
         try (BufferedReader in = Files.newBufferedReader(Paths.get(args[0]), StandardCharsets.UTF_8);
              BufferedWriter out = Files.newBufferedWriter(Paths.get(args[1]), StandardCharsets.UTF_8)) {
@@ -34,12 +36,13 @@ public class RecursiveWalk {
                     result.append(recursive(p));
                 }
             } catch (IOException e) {
-                result.append(Walk.getMD5(path));
+                result.append(hasher.getHash(path));
                 System.err.println("Problems with directory");
             }
         } else {
-            result.append(Walk.getMD5(path));
+            result.append(hasher.getHash(path));
         }
         return result.toString();
     }
 }
+
