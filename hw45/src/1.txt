@@ -1,0 +1,6 @@
+== Running test07_defaultConstructorClasses
+== Running test08_noDefaultConstructorClasses
+== Running test01_constructor
+== Running test02_standardMethodlessInterfaces
+== Running test03_standardInterfaces
+== Running test04_extendedInterfaces

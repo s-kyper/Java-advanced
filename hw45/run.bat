@@ -1,0 +1,2 @@
+java -cp  C:\Users\pinkdonut\IdeaProjects\hw45\lib\junit-4.11.jar;C:\Users\pinkdonut\IdeaProjects\hw45\artifacts\ImplementorTest.jar;C:\Users\pinkdonut\IdeaProjects\hw45\lib\hamcrest-core-1.3.jar; info.kgeorgiy.java.advanced.implementor.Tester jar-interface ru.ifmo.ctddev.kupriyanov.implementor.Implementor
+timeout -1

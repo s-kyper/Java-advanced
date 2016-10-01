@@ -1,0 +1,2 @@
+"C:\Program Files\Java\jdk1.8.0_45\bin\java" -classpath hamcrest-core-1.3.jar;junit-4.11.jar;quickcheck-0.6.jar;ImplementorTest.jar;. info.kgeorgiy.java.advanced.implementor.Tester class ru.ifmo.ctddev.kupriyanov.implementor.Implementor > 1.txt
+pause
